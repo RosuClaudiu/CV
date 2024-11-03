@@ -20,22 +20,22 @@
       50% {
         background-color: #fff;
       }
-      100% {F
+      100% {
         background-color: #3333ff;
       }
     }
 
     #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #3333ff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  z-index: 9999; /* adaugă acest rând pentru a se afișa peste celelalte elemente */
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #3333ff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      z-index: 9999; /* adaugă acest rând pentru a se afișa peste celelalte elemente */
+    }
 
     #header h1 {
       margin: 0;
@@ -46,20 +46,21 @@
     }
 
     #left-column {
-  padding-right: 0px;
-  margin-left: 1%;
-  margin-top: 100px; /* modifică această valoare pentru a ajusta poziția conținutului în funcție de înălțimea header-ului */
-  animation: textAnimation 120s linear infinite;
-  transform-origin: bottom;
-}
-@keyframes textAnimation {
-  100% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
+      padding-right: 0px;
+      margin-left: 1%;
+      margin-top: 100px; /* modifică această valoare pentru a ajusta poziția conținutului în funcție de înălțimea header-ului */
+      animation: textAnimation 120s linear infinite;
+      transform-origin: bottom;
+    }
+
+    @keyframes textAnimation {
+      100% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
 
     #right-column {
       position: absolute;
@@ -127,6 +128,19 @@
       width: 100%;
       height: 100%;
     }
+
+    .language-button {
+      background-color: #fff;
+      color: #3333ff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+    }
   </style>
 </head>
 <body>
@@ -134,26 +148,20 @@
     <div id="left-column">
       <div id="header">
         <h1>CV-ul Meu</h1>
-        
-    </ul>
+        <button class="language-button" onclick="toggleLanguage()">Switch to English</button>
       </div>
   
-      <section class="section">
-    </ul>
-</ul>
+      <section class="section" id="personal-info">
         <div>Nume: Roșu Claudiu</div>
         <div>Adresă: Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4,</div>
         <div>Telefon: 0723389779</div>
         <div>Email: rosu.claudiu@yahoo.com</div>
-        <div>Nume: Roșu Claudiu</div>
         <div>Sex: Masculin</div>
         <div>Data nașterii: 23/02/1976</div>
         <div>Naționalitate: Română</div>
-        <div>Telefon: 0723389779</div>
-        <div>Email: rosu.claudiu@yahoo.com</div>
       </section>
 
-      <section class="section">
+      <section class="section" id="professional-objective">
         <h2 class="section-title">Obiectiv profesional</h2>
         <div class="section-content">
           <p>Îmi doresc un job in care sa pot să-mi folosesc cunoștințele și experiența pentru a contribui la dezvoltarea și promovarea companiei.</p>
@@ -162,11 +170,10 @@
         </div>
       </section>
 
-        <section class="section">
-          <h2 class="section-title">Experiență profesională</h2>
-          <div class="section-content">
-            <h3>FreeLancer/Blogger</h3>
-          
+      <section class="section">
+        <h2 class="section-title">Experiență profesională</h2>
+        <div class="section-content">
+          <h3>FreeLancer/Blogger</h3>
           <p><strong>Decembrie 2021 - Prezent</strong></p>
           <p>București | Internet / Marketing Online</p>
           <p>Administrator/Owner:</p>
@@ -179,410 +186,190 @@
             <li>www.atelieruldestrungarie.wordpress.com</li>
             <li>www.norocosul.000webhostapp.com</li>
             <li>www.starthtml.nicepage.io</li>
-                 </ul>
-                <p>Responsabilități:</p>
-                <ul>
-                 <li>realizarea site-urilor</li>
-                 <li>realizarea de texte specifice și materiale de comunicare online pentru website-urile create</li>
-                 <li>realizarea de texte specifice și materiale de comunicare online pentru rețelele Social Media</li>
-                 <li>căutarea si identificarea de fotografii sau material grafic</li>
-                 <li>cercetarea și documentarea cu informatii necesare realizării continutului text</li>
-                 <li>cercetarea și documentarea cu informatii necesare realizării continutului grafic</li>
-                 <li>reaserch pentru Social Media și SEO pentru textul creat</li>
-                 <li>adaugărea de continut text, grafic și video pe website-urile create</li>
-                 <li>adaugărea de continut text, grafic și video pe rețelele sociale</li>
-            <div class="section-content">
-              <div class="job"></div>
-            <h3>Economist</h3>
-                <p><strong>Martie 2021 - Noiembrie 2021</strong></p>
-                <p>București | Sănatate /Admisitrația Spitalelor și Serviciilor Medicale București</p>
-                <p>Spitalul de Boli Infectioase si Tropicale “Dr.Victor Babes”</p>
-                </ul>
-                <p>Responsabilități:</p>
-                <ul>
-                  
-                 <li>întocmirea de propuneri pentru planul de investiții și reparații capitale pentru imobilele aflate in utilizare</li>
-                 <li>elaborarea planului anual de achiziții publice, prin propunerea de achiziții și dotări care au legătură cu activitatea de administrare a unității</li>
-                 <li>gestionarea contractelor de închiriere pentru imobilele aflate în proprietatea sau/si administrarea unității; - realizarea de raportări lunare</li>
-                 <li>organizarea efectuării curățeniei în toate sectoarele de activitate</li>
-                 <li>asigurarea obținerii în timp util a tuturor autorizațiilor necesare bunei funcționări a unității și ținerea unei evidențe strict a termenelor de valabilitate a celor existente;</li>
-                 <li>stabilirea necesarului de produse în vederea unei bune administrări a patrimoniului, asigurând la timp partea corespunzătoare a planului de achiziții</li>
-                 <li>asigurarea controlului calitativ și recepția reparațiilor și produselor tehnologice de întreținere efectuate;
-                 - evidența și întreținerea aparaturii medicale și nemedicale și a utilajelor din dotare</li>
-                 <li>evidența parcului auto prin întocmirea de foi de parcurs, evidența termenelor inspecțiilor auto, a asigurărilor și a bunei funcționări a mașinilor aflate în proprietatea Spitalului</li>
-                 <li>soluționarea oricăror probleme cu caracter administrativ</li>
-                  <div class="section-content">
-                    <ul></ul>
-                  <h3>FreeLancer/Blogger</h3>
-                <p><strong>Septembrie 2019 - Ianuarie 2021</strong></p>
-                <p>București | Internet / Marketing Online</p>
-                <p>Administrator/Owner:</p>
-                
-                <li>www.tatilacratita.com</li>
-                <li>www.crypto-tati.site</li>
-                </ul>
-                <p>Responsabilități:</p>
-                <ul>
-                    <li>realizarea site-urilor</li>
-                    <li>realizarea de texte specifice și materiale de comunicare online pentru website-urile create</li>
-                    <li>realizeazarea de texte specifice si materiale de comunicare online pentru rețelele Social Media</li>
-                    <li>căutarea si identificarea de fotografii sau material grafic</li>
-                    <li>cercetarea și documentarea cu informatii necesare realizării continutului text</li>
-                    <li>cercetarea și documentarea cu informatii necesare realizării continutului grafic</li>
-                    <li>reaserch pentru Social Media și SEO pentru textul creat</li>
-                    <li>adaugărea de continut text, grafic și video pe website-urile create</li>
-                    <li>adaugărea de continut text, grafic și video pe rețelele sociale</li>
-                        <div class="section-content">
-                      </ul>
-                    </div>
-                  </section>
-                  <div class="section-content">
-                    <ul></ul>
-               <h3>Senior Relationship Manager Clienti Premium - Raiffeisen Bank</h3>
-          <p><strong>Februarie 2013 - Septembrie 2019</strong></p>
-          <p>București | Internet / Marketing Online|Bucuresti | Bănci / Servicii financiare
-        </ul>
-        <p>Responsabilități:</p>
-        <ul>
-          <li>inițierea și dezvoltarea relației cu clienții existenți și cu prospecți, oferind consultanță financiară, vizând vânzarea consultativă și atitudinea proactivă</li>
-          <li>propune clienților variante de administrare a disponibilităților existente în vederea optimizării randamentelor și a gestionării potențialelor riscuri</li>
-          <li>promovarea și vânzarea activă a următoarelor categorii de produse: fonduri de investiții, depozite, conturi de economii, credite; asigurări; planuri de economii/pensii etc.</li>
-          <li>asigură interfața cu banca pentru clienții din segmentul Premium și nu numai, solicitând suport din partea administrației centrale și/sau a agențiilor</li>
-          <li>contribuie la realizarea obiectivelor de vânzări, urmărind maximizarea profitabilității pe segmentul de clienți Premium, crescând retenția și rata de cross-sell</li>
-          <li>cercetarea și documentarea cu informații necesare realizării conținutului grafic</li>
-          <li>efectuează operațiuni de procesare aferente vânzării produselor de retail conform catalogului de produse al băncii</li>
-          <li>monitorizează calitativ și cantitativ portofoliul de produse pentru clienții Premium alocați</li>
-          <li>face propuneri de preț preferențial în limitele competențelor interne aprobate</li>
-          <li>face propuneri de îmbunătățire a produselor existente în scopul creșterii profitabilității și competitivității lor</li>
+          </ul>
+          <p>Responsabilități:</p>
+          <ul>
+            <li>realizarea site-urilor</li>
+            <li>realizarea de texte specifice și materiale de comunicare online pentru website-urile create</li>
+            <li>realizarea de texte specifice și materiale de comunicare online pentru rețelele Social Media</li>
+            <li>căutarea si identificarea de fotografii sau material grafic</li>
+            <li>cercetarea și documentarea cu informatii necesare realizării continutului text</li>
+            <li>cercetarea și documentarea cu informatii necesare realizării continutului grafic</li>
+            <li>reaserch pentru Social Media și SEO pentru textul creat</li>
+            <li>adaugărea de continut text, grafic și video pe website-urile create</li>
+            <li>adaugărea de continut text, grafic și video pe rețelele sociale</li>
+          </ul>
           <div class="section-content">
+            <h3>Economist</h3>
+            <p><strong>Martie 2021 - Noiembrie 2021</strong></p>
+            <p>București | Sănatate /Admisitrația Spitalelor și Serviciilor Medicale București</p>
+            <p>Spitalul de Boli Infectioase si Tropicale “Dr.Victor Babes”</p>
+            <p>Responsabilități:</p>
+            <ul>
+              <li>întocmirea de propuneri pentru planul de investiții și reparații capitale pentru imobilele aflate in utilizare</li>
+              <li>elaborarea planului anual de achiziții publice, prin propunerea de achiziții și dotări care au legătură cu activitatea de administrare a unității</li>
+              <li>gestionarea contractelor de închiriere pentru imobilele aflate în proprietatea sau/si administrarea unității; - realizarea de raportări lunare</li>
+              <li>organizarea efectuării curățeniei în toate sectoarele de activitate</li>
+              <li>asigurarea obținerii în timp util a tuturor autorizațiilor necesare bunei funcționări a unității și ținerea unei evidențe strict a termenelor de valabilitate a celor existente;</li>
+              <li>stabilirea necesarului de produse în vederea unei bune administrări a patrimoniului, asigurând la timp partea corespunzătoare a planului de achiziții</li>
+              <li>asigurarea controlului calitativ și recepția reparațiilor și produselor tehnologice de întreținere efectuate;</li>
+              <li>evidența și întreținerea aparaturii medicale și nemedicale și a utilajelor din dotare</li>
+            </ul>
+            <div class="section-content">
+              <h3>Economist</h3>
+              <p><strong>Octombrie 2015 - Februarie 2021</strong></p>
+              <p>București | Sănatate /Admisitrația Spitalelor și Serviciilor Medicale București</p>
+              <p>Spitalul Clinic de Urgență „Bagdasar-Arseni”</p>
+              <p>Responsabilități:</p>
+              <ul>
+                <li>întocmirea de propuneri pentru planul de investiții și reparații capitale pentru imobilele aflate in utilizare</li>
+                <li>elaborarea planului anual de achiziții publice, prin propunerea de achiziții și dotări care au legătură cu activitatea de administrare a unității</li>
+                <li>gestionarea contractelor de închiriere pentru imobilele aflate în proprietatea sau/si administrarea unității; - realizarea de raportări lunare</li>
+                <li>organizarea efectuării curățeniei în toate sectoarele de activitate</li>
+                <li>asigurarea obținerii în timp util a tuturor autorizațiilor necesare bunei funcționări a unității și ținerea unei evidențe strict a termenelor de valabilitate a celor existente;</li>
+                <li>stabilirea necesarului de produse în vederea unei bune administrări a patrimoniului, asigurând la timp partea corespunzătoare a planului de achiziții</li>
+                <li>asigurarea controlului calitativ și recepția reparațiilor și produselor tehnologice de întreținere efectuate;</li>
+                <li>evidența și întreținerea aparaturii medicale și nemedicale și a utilajelor din dotare</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Educație</h2>
+        <div class="section-content">
+          <h3>Universitatea din București</h3>
+          <p><strong>2013 - 2015</strong></p>
+          <p>Master în Managementul Resurselor Umane</p>
+        </div>
+
+        <div class="section-content">
+          <h3>Universitatea din București</h3>
+          <p><strong>2009 - 2013</strong></p>
+          <p>Licență în Economie</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Abilități</h2>
+        <div class="section-content">
+          <ul class="skills">
+            <li class="skill">Microsoft Office</li>
+            <li class="skill">SEO</li>
+            <li class="skill">Marketing Online</li>
+            <li class="skill">Scriere Creativă</li>
+            <li class="skill">Comunicare Eficientă</li>
+            <li class="skill">Gestionarea Proiectelor</li>
+            <li class="skill">Planificare Strategică</li>
           </ul>
         </div>
       </section>
-      <div class="section-content">
-        <ul></ul>
-   <h3>Consilier Clienți - Raiffeisen Bank</h3>
-<p><strong>Aprilie 2008 - Ianuarie 2013</strong></p>
-<p>București | Internet / Marketing Online|București |Bănci / Servicii financiare
-</ul>
-<p>Responsabilități:</p>
-<ul>
-  <li>inițierea și dezvoltarea relației cu clienții existenți și cu potențiali clienți, vizând vânzarea consultativă și atitudinea proactivă</li>
-  <li>promovarea și vânzarea activă a următoarelor categorii de produse: fonduri de investiții, depozite, conturi de economii, credite; asigurări; planuri de economii/pensii etc</li>
-  <li>actualizarea informațiilor despre clienți</li>
-  <li>clasarea documentelor la dosarele clienților</li>
-  <li>furnizarea de informații privind stadiul Contractelor/Incidente aferente derulării Contractelor</li>
-  <li>oferirea de suport și consilierea clienților în completarea documentelor</li>
-  <li>finalizarea procesului de vânzare și asigurarea serviciului post-vânzare</li>
-  <li>verificarea informațiilor furnizate în cererea de credit, analiza documentației de credit, formularea propunerii de aprobare/respingere și întocmirea formularelor de aprobare internă, înștiințarea clientului cu privire la aprobarea/respingerea cererii de credit depusă</li>
-  <li>întocmirea contractului de credit, a contractului de gaj (când este cazul) și a polițelor de asigurare</li>
-  <li>realizarea targetului, mărirea portofoliului de clienți</li>
-  <li>identificarea nevoilor clienților, recomandând serviciile și produsele adecvate</li>
-  <li>efectuarea de operațiuni în contextul procesului de vânzare</li>
-</ul>
-
-</div>
-</section>
-<div class="section-content">
-  <ul></ul>
-<h3>Ofițer Tranzacții Clienți – Raiffeisen Bank</h3>
-<p><strong>Ianuarie 2008 - Aprilie 2008</strong></p>
-<p>București | Bănci | Bănci / Servicii financiare
-</ul>
-<p>Responsabilități:</p>
-<ul>
-  <li>procesarea tranzacțiilor non-cash clienților persoane fizice în conformitate cu normele și procedurile băncii</li>
-  <li>înrolarea și deschiderea de conturi curente și depozite pentru clienți</li>
-  <li>actualizarea informațiilor despre clienți</li>
-  <li>clasarea documentelor la dosarele clienților</li>
-  <li>administrarea și actualizarea conturilor clienților</li>
-  <li>oferirea de suport și consilierea clienților în completarea documentelor</li>
-  <li>eliberarea de extrase de cont și a altor documente existente la mapă</li>
-  <li>procesarea ordinelor de plată pentru schimb valutar și a ordinelor de plată intra-bancare</li>
-  <li>primirea de la clienți, verificarea și avansarea spre procesare a instrumentelor de plată: de credit și de debit în lei, a ordinelor de plată în lei și valută.</li>
-  <li>realizarea targetului, mărirea portofoliului de clienți</li>
-  <li>identificarea nevoilor clienților, recomandând serviciile și produsele adecvate</li>
-  <li>efectuarea de operațiuni în contextul procesului de vânzare</li>
-  </ul>
-
-</div>
-</section>
-
-<div class="section-content">
-  <ul></ul>
-<h3>Casier – Raiffeisen Bank</h3>
-<p><strong>Martie 2007 - Ianuarie 2008</strong></p>
-<p>București | Bănci | Bănci / Servicii financiare
-</ul>
-<p>Responsabilități:</p>
-<ul>
-<li>supervizor pentru tranzacții mai mari de 10000 euro</li>
-<li>efectuarea încasărilor și plăților în numerar - lei și valută</li>
-<li>efectuarea operațiunilor cu numerar pentru carduri în lei și în valută</li>
-<li>clasarea documentelor la dosarele clienților</li>
-<li>procesarea schimburilor valutare prin casă de schimb valutar</li>
-<li>numărarea, verificarea, sortarea și împachetarea numerarului primit</li>
-<li>eliberarea de extrase de cont și a altor documente existente la mapă</li>
-<li>procesarea ordinelor de plată pentru schimb valutar și a ordinelor de plată intra-bancare</li>
-<li>Întocmirea documentelor zilnice de casă</li>
-<li>realizarea targetului, mărirea portofoliului de clienți</li>
-<li>identificarea nevoilor clienților, recomandând serviciile și produsele adecvate</li>
-</ul>
-
-</div>
-</section>
-<div class="section-content">
-  <ul></ul>
-  <h3>Asistent Manager - Sc Roliv Srl</h3>
-  <p><strong>Decembrie 2007 - Martie 2007</strong></p>
-  <p>București |Comerț / Servicii
-  </ul>
-  <p>Responsabilități:</p>
-<ul>
-  <li>întocmirea de rapoarte și cereri;</li>
-  <li>primirea, înregistrarea și scanarea documentelor contabile conform procedurilor interne</li>
-  <li>redactarea de documente, prezentări și rapoarte</li>
-  <li>organizarea și coordonarea de întâlniri și conferințe</li>
-  <li>identificarea nevoilor clienților, recomandând serviciile și produsele adecvate</li>
-</ul>
-
-</div>
-</section>  
-<div class="section-content">
-  <ul></ul>
-  <h3>Operator PC – Cobra&DSecurity (colaborator)</h3>
-  <p><strong>Ianuarie 2006 - Iulie 2006</strong></p>
-  <p>București |Comerț / Servicii
-  </ul>
-  <p>Responsabilități:</p>
-<ul>
-  <li>introducerea de date și sa prestarea altor sarcini folosind software-ul instalat in computer </li>
-  <li>încarcarea CD-urilor și instalarea de programe </li>
-  <li>mentenanța software în caz de defecțiuni </li>
-  <li>crearea de fișierea de date noi</li>
-</ul>
-
-</div>
-</section>  
-<div class="section-content">
-  <ul></ul>
-  <h3>Internet Consultant – Netservices S.R.L (colaborator)</h3>
-  <p><strong>Iunie 2004 - Decembrie 2005</strong></p>
-  <p>București |Comerț / Servicii
-  </ul>
-  <p>Responsabilități:</p>
-<ul>
-<li>promovarea, vânzarea produselor companiei în conformitate cu standardele comerciale ale companiei</li>
-<li>consilierea clienților în scopul satisfacerii nevoilor acestora privind produsele contractate</li>
-<li>administrarea și dezvoltarea portofoliului de clienți și de furnizori</li>
-</ul>
-</div>
-</section>  
-<section class="section">
-  <ul></ul>
-  <h2>Educație</h2>
-  <p style="margin-bottom: 10px;"></p><p><strong>2009 - 2011</strong></p>
-  <p>Universitatea Spiru Haret “Facultatea de Finanţe şi Bănci Bucureşti</p>
-  <p>Programul de Masterat “Bănci şi pieţe financiare” - Diploma Studii Postuniversitare</p>
-  <p style="margin-bottom: 10px;"><strong>2006 - 2009</strong></p>
-  <p>Universitatea Spiru Haret “Facultatea de Finanţe şi Bănci Bucureşti - Diploma Studii Universitare</p>
-  <p style="margin-bottom: 10px;"><strong>2003 - 2004</strong></p>
-  <p>“Crismalin Infoserv” - curs operare calculator</p>
-  <p style="margin-bottom: 10px;"><strong>1990 - 1995</strong></p>
-  <p>Liceul “Octav Onicescu” din Bucureşti(1991-1995): profil uman-limbi straine (rusa /engleza);</p>
-</section>
-
-
-      <section class="section">
-        <h2>Competențe informatice</h2>
-        <li>Microsoft Office </li>
-        <li>Wordpress Basic</li>
-        <li>HTML Beginner</li>
-        <li>Python Beginner</li>
-        <li>Windows Basic</li>
-        <li>Networks Beginner</li>
-        <li>JavaScript Beginner</li>
-
-        </ul>
-      </section>
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Competenţe dobândite la locul de muncă </h2>
-    <li>Certificare MIFID II – training pentru personalul ce ofera informatii financiare - atestat „Institutul Bancar Român” 2019. </li>
-    <li>Certificare  consultant in  investiţii MIFID II – atestat „ASF” 2018>
-    <li>Certificare în asigurari : Instiitutul de Management în Asigurari – IMA septembrie 2016</li>
-
-    </ul>
-  </section>
-</p>
-</section>
-
-<section class="section">
-  <h2>Competenţe Personale </h2>
-  <li>Limba  maternă - Limba română </li>
-  <li>Alte limbi străine cunoscute -Limba Engleză (nivel mediu)</li>
-
-  </ul>
-</section>
-</p>
-</section>
-</ul>
-</section>
-</p>
-</section>
-
-<section class="section">
-<h2>Alte Competenţe  </h2>
-<li>Cunoștințe Sofware AI </li>
-<li>Cunostințe rețele sociale</li>
-<li>Cunoștințe grafica digitală:CapCut, Adobe Photoshop ,Windows Editor</li>
-<li>Cunoștințe în Google Analytics, Search Console</li>
-
-</ul>
-</section>
-</p>
-</section>
-
-<section class="section">
-  <h2>Permis de conducere </h2>
-  <li>Categoria B Ianuarie 1995 </li>
-
-  </ul>
-</section>
-
-      <section class="section">
-        <div class="abilitati"></div>
-        <h2>Abilități</h2>
-        <ul class="skills">
-          <li class="skill">CORECT</li>
-          <li class="skill">EMPATIC</li>
-          <li class="skill">CREATIV</li>
-          <li class="skill">ADAPTABIL</li>
-        </ul>
-      </section>
     </div>
 
-    <div id="right-column" style="position: fixed; top: 10px; right: 1px;">
-      <img id="profile-picture" src="https://raw.githubusercontent.com/RosuClaudiu/CV/main/poze/pozacv2.jpg" alt="Poza Profil">
+    <div id="right-column">
+      <img id="profile-picture" src="https://github.com/RosuClaudiu/CV/raw/main/poze/poza%20profil.jpg" alt="Poza de profil">
     </div>
-      
-
-    <canvas></canvas>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script>
-    // Codul JavaScript pentru elementele 3D sau alte funcționalități JavaScript
-    const canvas = document.querySelector('canvas');
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight); // Setam dimensiunea canvas-ului la dimensiunea ferestrei
+    let isEnglish = false;
 
-    document.body.appendChild(canvas);
+    function toggleLanguage() {
+      const personalInfo = document.getElementById('personal-info');
+      const professionalObjective = document.getElementById('professional-objective');
+      const experience = document.querySelectorAll('.section-content h3');
+      const education = document.querySelectorAll('.section-content h3');
+      const skills = document.querySelectorAll('.skills .skill');
 
-    const scene = new THREE.Scene();
+      if (isEnglish) {
+        // Schimbă în limba română
+        personalInfo.innerHTML = `
+          <div>Nume: Roșu Claudiu</div>
+          <div>Adresă: Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4,</div>
+          <div>Telefon: 0723389779</div>
+          <div>Email: rosu.claudiu@yahoo.com</div>
+          <div>Sex: Masculin</div>
+          <div>Data nașterii: 23/02/1976</div>
+          <div>Naționalitate: Română</div>
+        `;
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x9933ff }); // Culoarea mov
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+        professionalObjective.innerHTML = `
+          <h2 class="section-title">Obiectiv profesional</h2>
+          <div class="section-content">
+            <p>Îmi doresc un job in care sa pot să-mi folosesc cunoștințele și experiența pentru a contribui la dezvoltarea și promovarea companiei.</p>
+            <p>Este important pentru mine să mă implic într-o echipă în care să existe  respectul reciproc și o cultură a colaborării.</p> 
+            <p>Îmi doresc să lucrez alături de oameni care împărtășesc valorile mele și sunt deschiși la idei noi și inovație.</p>
+          </div>
+        `;
 
-    cube.position.x = -0.5; // Mutam cubul in partea stanga
+        experience.forEach((ex, index) => {
+          if (index === 0) {
+            ex.innerHTML = "FreeLancer/Blogger";
+          } else {
+            ex.innerHTML = "Economist";
+          }
+        });
 
-    const yellowGeometry = new THREE.BoxGeometry(0.98, 0.98, 0.98);
-    const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 }); // Culoarea galbena
-    const yellowCube = new THREE.Mesh(yellowGeometry, yellowMaterial);
-    scene.add(yellowCube);
+        education.forEach((edu, index) => {
+          if (index === 0) {
+            edu.innerHTML = "Universitatea din București (2013 - 2015) - Master în Managementul Resurselor Umane";
+          } else {
+            edu.innerHTML = "Universitatea din București (2009 - 2013) - Licență în Economie";
+          }
+        });
 
-    yellowCube.position.x = -1.5; // Mutam cubul galben in stanga
+        skills.forEach(skill => {
+          skill.innerHTML = skill.innerHTML.replace("English", "Română");
+        });
 
-    const greenGeometry = new THREE.BoxGeometry(0.78, 0.78, 0.78);
-    const greenMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Culoarea verde
-    const greenCube = new THREE.Mesh(greenGeometry, greenMaterial);
-    scene.add(greenCube);
+        document.querySelector('.language-button').innerText = 'Switch to English';
+      } else {
+        // Schimbă în limba engleză
+        personalInfo.innerHTML = `
+          <div>Name: Claudiu Roșu</div>
+          <div>Address: Bd. Camil Ressu nr. 31, Bl N3, Sc.4,</div>
+          <div>Phone: 0723389779</div>
+          <div>Email: rosu.claudiu@yahoo.com</div>
+          <div>Gender: Male</div>
+          <div>Date of Birth: 23/02/1976</div>
+          <div>Nationality: Romanian</div>
+        `;
 
-    greenCube.position.x = -1.5; // Mutam cubul verde in stanga
+        professionalObjective.innerHTML = `
+          <h2 class="section-title">Professional Objective</h2>
+          <div class="section-content">
+            <p>I desire a job where I can use my knowledge and experience to contribute to the development and promotion of the company.</p>
+            <p>It is important for me to get involved in a team where there is mutual respect and a culture of collaboration.</p> 
+            <p>I wish to work alongside people who share my values and are open to new ideas and innovation.</p>
+          </div>
+        `;
 
-    const redGeometry = new THREE.BoxGeometry(0.58, 0.58, 0.58);
-    const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Culoarea rosie
-    const redCube = new THREE.Mesh(redGeometry, redMaterial);
-    scene.add(redCube);
+        experience.forEach((ex, index) => {
+          if (index === 0) {
+            ex.innerHTML = "FreeLancer/Blogger";
+          } else {
+            ex.innerHTML = "Economist";
+          }
+        });
 
-    redCube.position.x = -2.7; // Mutam cubul rosu in stanga
+        education.forEach((edu, index) => {
+          if (index === 0) {
+            edu.innerHTML = "University of Bucharest (2013 - 2015) - Master's in Human Resources Management";
+          } else {
+            edu.innerHTML = "University of Bucharest (2009 - 2013) - Bachelor's in Economics";
+          }
+        });
 
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
+        skills.forEach(skill => {
+          skill.innerHTML = skill.innerHTML.replace("Română", "English");
+        });
 
-    function animate() {
-      requestAnimationFrame(animate);
-
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      yellowCube.rotation.x += 0.01;
-      yellowCube.rotation.y += 0.01;
-      redCube.rotation.x += 0.01;
-      redCube.rotation.y += 0.01;
-      greenCube.rotation.x += 0.01;
-      greenCube.rotation.y += 0.01;
-
-      // Adaugam cod pentru miscarea cuburilor in sus si jos
-      cube.position.y += 0.01 * cube.directionY;
-      yellowCube.position.y += 0.01 * yellowCube.directionY;
-      redCube.position.y += 0.01 * redCube.directionY;
-      greenCube.position.y += 0.01 * greenCube.directionY;
-
-      // Inversam directia cuburilor daca ajung la limitele superioare sau inferioare
-      if (cube.position.y > 2 || cube.position.y < -2) {
-        cube.directionY *= -1;
+        document.querySelector('.language-button').innerText = 'Schimbă în Română';
       }
-      if (yellowCube.position.y > 1 || yellowCube.position.y < -1) {
-        yellowCube.directionY *= -1;
-      }
-      if (redCube.position.y > 2 || redCube.position.y < -2) {
-        redCube.directionY *= -1;
-      }
-      if (greenCube.position.y > 2 || greenCube.position.y < -2) {
-        greenCube.directionY *= -1;
-      }
-      renderer.render(scene, camera);
+
+      isEnglish = !isEnglish;
     }
-
-    animate();
-    window.addEventListener('load', () => {
-  const canvas = document.querySelector('canvas');
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-  const scene = new THREE.Scene();
-
-  const yellowGeometry = new THREE.BoxGeometry(0.98, 0.98, 0.98);
-  const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-  const yellowCube = new THREE.Mesh(yellowGeometry, yellowMaterial);
-  scene.add(yellowCube);
-
-  yellowCube.position.x = 1.5;
-
-  function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    yellowCube.rotation.x += 0.01;
-    yellowCube.rotation.y += 0.01;
-    renderer.render(scene, camera);
-  }
-
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
-  );
-  camera.position.z = 5;
-
-  animate();
-});
-
   </script>
-  
 </body>
 </html>
