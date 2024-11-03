@@ -1,0 +1,269 @@
+<style> 
+    /* Stilurile CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      animation: backgroundAnimation 30s ease infinite alternate;
+    }
+  
+    @keyframes backgroundAnimation {
+      0% {
+        background-color: #3333ff;
+      }
+      60% {
+        background-color: #fff;
+      }
+      100% {
+        background-color: #3333ff;
+      }
+    }
+  
+    #header {
+      background-color: #3333ff;
+      color: #0c0101;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    #header h1 {
+      margin: 0;
+    }
+  
+    #container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    #left-column {
+      flex-basis: 60%;
+      padding-right: 20px;
+    }
+  
+    #right-column {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    #profile-picture {
+      width: auto;
+      height: 150px;
+      object-fit: contain;
+      margin-right: 200px;
+      margin-bottom: 160px; /* Modificare valoare pentru a muta poza în sus */
+    }
+  
+    .section {
+      margin-bottom: 4px;
+    }
+  
+    .section h2 {
+      margin: 0 0 10px;
+    }
+  
+    .section p {
+      margin: 0;
+    }
+  
+    .skills {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .skill {
+      display: inline-block;
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 5px 10px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      animation: rotate 8s linear infinite;
+      transform-style: preserve-3d;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+    
+    .section-content {
+      text-indent: 20px;
+    }
+  </style>
+  
+</head>
+<body>
+  <header id="header">
+    <h1>CV - Roșu Claudiu</h1>
+  </header>
+
+  <div id="container">
+    <div id="left-column">
+      <section class="section">
+        <div>Nume: Roșu Claudiu</div>
+        <div>Adresă: Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4,</div>
+        <div>Telefon: 0723389779</div>
+        <div>Email: rosu.claudiu@yahoo.com</div>
+        <div>Sex: Masculin</div>
+        <div>Data nașterii: 23/02/1976</div>
+        <div>Naționalitate: Română</div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Obiectiv profesional</h2>
+        <div class="section-content">
+          <p>Îmi doresc un job bine plătit în domeniul social media, în care pot să-mi folosesc cunoștințele și experiența pentru a contribui la dezvoltarea și promovarea brandului dumneavoastră..</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experiență profesională</h2>
+        <div class="section-content">
+          <h3>Blogger</h3>
+          <p><strong>Decembrie 2021 - Prezent</strong></p>
+          <p>Bucuresti | Internet / Marketing Online</p>
+          <p>Administrator/Owner:</p>
+          <ul>
+            <li>www.tatilacratita.com</li>
+            <li>www.crypto-tati.site</li>
+          </ul>
+          <p>Webmaster:</p>
+          <ul>
+            <li>www.atelieruldestrungarie.wordpress.com</li>
+            <li>www.norocosul.000webhostapp.com</li>
+            <li>www.starthtml.nicepage.io</li>
+          </ul>
+          <p>Responsabilități:</p>
+          <ul>
+            <li>Realizarea site-urilor</li>
+            <li>Realizarea de texte specifice și materiale de comunicare online pentru website-urile create</li>
+            <li>Realizarea de texte specifice și materiale de comunicare online.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Educație</h2>
+        <p>Diplomă de licență în Informatică - Universitatea Mea (2008-2012)</p>
+      </section>
+
+      <section class="section">
+            <h2>Experiență</h2>
+            <p>Programator Web - Compania X (2012-prezent)</p>
+            <p>Proiecte notabile:</p>
+            <ul>
+              <li>Proiect 1</li>
+              <li>Proiect 2</li>
+            </ul>
+          </section>
+          
+          <section class="section">
+            <h2>Abilități</h2>
+            <ul class="skills">
+              <li class="skill">HTML</li>
+              <li class="skill">CSS</li>
+              <li class="skill">JavaScript</li>
+              <li class="skill">Web Design</li>
+            </ul>
+          </section>
+          
+   </div>
+    <div id="right-column">
+      <section class="section">
+        </ul>
+      </section>
+      <img id="profile-picture" src="pozaCV.jpg" alt="Poza Profil">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script>
+    // Codul JavaScript pentru elementele 3D sau alte funcționalități JavaScript
+    const canvas = document.createElement('canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(550, 550);
+
+    document.getElementById('right-column').appendChild(canvas);
+
+    const scene = new THREE.Scene();
+
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x9933ff }); // Culoarea mov
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    cube.position.x = 0.3; // Mută cubul în partea dreaptă
+
+    const yellowGeometry = new THREE.BoxGeometry(0.70, 0.70, 0.70);
+    const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 }); // Culoarea galbenă
+    const yellowCube = new THREE.Mesh(yellowGeometry, yellowMaterial);
+    scene.add(yellowCube);
+
+    yellowCube.position.x = -1.8; // Mută cubul galben mai în stânga
+
+    const greenGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+    const greenMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Culoarea verde
+    const greenCube = new THREE.Mesh(greenGeometry, greenMaterial);
+    scene.add(greenCube);
+
+    greenCube.position.x = -0.8; // Mută cubul verde mai în stânga
+
+    const redGeometry = new THREE.BoxGeometry(0.58, 0.58, 0.58);
+    const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Culoarea roșie
+    const redCube = new THREE.Mesh(redGeometry, redMaterial);
+    scene.add(redCube);
+
+    redCube.position.x = 1.7; // Mută cubul roșu mai în stânga
+
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
+    camera.position.z = 5;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      yellowCube.rotation.x += 0.01;
+      yellowCube.rotation.y += 0.01;
+      redCube.rotation.x += 0.01;
+      redCube.rotation.y += 0.01;
+      greenCube.rotation.x += 0.01;
+      greenCube.rotation.y += 0.01;
+
+      // Adăugați cod pentru mișcarea cuburilor în sus și în jos
+      cube.position.y += 0.01 * cube.directionY;
+      yellowCube.position.y += 0.01 * yellowCube.directionY;
+      redCube.position.y += 0.01 * redCube.directionY;
+      greenCube.position.y += 0.01 * greenCube.directionY;
+
+      // Inversați direcția cuburilor dacă ajung la limitele superioare sau inferioare
+      if (cube.position.y > 2 || cube.position.y < -2) {
+        cube.directionY *= -1;
+      }
+      if (yellowCube.position.y > 2 || yellowCube.position.y < -2) {
+        yellowCube.directionY *= -1;
+      }
+      if (redCube.position.y > 2 || redCube.position.y < -2) {
+        redCube.directionY *= -1;
+      }
+      if (greenCube.position.y > 2 || greenCube.position.y < -2) {
+        greenCube.directionY *= -1;
+      }
+      renderer.render(scene, camera);
+    }
+
+    // Inițializați direcția cuburilor cu o valoare aleatoare
+    cube.directionY = Math.random() > 0.5 ? 1 : -1;
+    yellowCube.directionY = Math.random() > 0.5 ? 1 : -1;
+    redCube.directionY = Math.random() > 0.5 ? 1 : -1;
+    greenCube.directionY = Math.random() > 0.5 ? 1 : -1;
+    animate();
+  </script>
+</body>
+</html>
