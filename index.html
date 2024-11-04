@@ -582,6 +582,22 @@
 });
 
   </script>
-  
+   window.onload = function() {
+    const leftColumn = document.getElementById('left-column');
+    const totalHeight = leftColumn.scrollHeight; // Total height of the text
+    leftColumn.style.height = totalHeight + 'px'; // Set the height of the column
+  };
+
+  function resetAnimation() {
+    const leftColumn = document.getElementById('left-column');
+    leftColumn.style.animation = 'none'; // Reset the animation
+    setTimeout(() => {
+      leftColumn.style.animation = ''; // Restart the animation
+    }, 50); // Small timeout to allow the reset to take effect
+  }
+
+  // Call resetAnimation at regular intervals
+  setInterval(resetAnimation, 120000); // Change 120000 to match your animation duration (in milliseconds)
+</script>
 </body>
 </html>
