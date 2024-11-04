@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,25 +138,15 @@
   <script src="https://unpkg.com/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Inițializarea i18next
+      // Inițializarea i18next cu backend HTTP pentru a încărca traducerile din fișiere JSON
       i18next
         .use(i18nextHttpBackend)
         .init({
-          lng: 'en',
+          lng: 'en', // Limba inițială
+          fallbackLng: 'en', // Limbă de rezervă
           debug: true,
-          resources: {
-            en: {
-              translation: {
-                "cv_title": "My CV",
-                "language_button": "English"
-              }
-            },
-            ro: {
-              translation: {
-                "cv_title": "CV-ul Meu",
-                "language_button": "Română"
-              }
-            }
+          backend: {
+            loadPath: 'https://raw.githubusercontent.com/RosuClaudiu/CV/main/locales/{{lng}}/translation.json' // Calea către fișierele de traducere
           }
         }, function(err, t) {
           // Actualizarea textelor traduse la inițializare
@@ -177,6 +167,7 @@
 
 </head>
 <body>
+    
   <div id="container">
     <div id="left-column">
       <div id="header">
@@ -606,14 +597,14 @@
         const yellowCube = new THREE.Mesh(yellowGeometry, yellowMaterial);
         scene.add(yellowCube);
       
-        yellowCube.position.x = 3.5;
+        yellowCube.position.x = 0.5;
       
         const cubeGeometry = new THREE.BoxGeometry(0.30, 0.30, 0.30); // Asigură-te că cube este definit
         const cubeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
         scene.add(cube); // Adaugă cube la scenă
-         cube.position.x = 0.9; // Mutam cubul verde in stanga
-      
+         cube.position.x = -1.9; // Mutam cubul verde in stanga
+
         const camera = new THREE.PerspectiveCamera(
           60,
           window.innerWidth / window.innerHeight,
@@ -629,6 +620,7 @@
           yellowCube.rotation.x += 0.01;
           yellowCube.rotation.y += 0.01;
           renderer.render(scene, camera);
+        
         }
         
         animate(); // Apelul pentru animate() aici
