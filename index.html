@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,13 +166,16 @@
 
       // Funcția de schimbare a limbii
       document.getElementById('language-toggle').addEventListener('click', function() {
-        const newLang = i18next.language === 'en' ? 'ro' : 'en';
-        i18next.changeLanguage(newLang, function(err, t) {
-          document.getElementById('cv-title').innerHTML = t('cv_title');
-          document.getElementById('language-toggle').innerHTML = t('language_button');
-        });
+        const currentLang = document.documentElement.lang;
+        if (currentLang === "ro") {
+          // Redirecționează la versiunea în engleză
+          window.location.href = "cv_en.html";
+        } else {
+          // Redirecționează la versiunea în română
+          window.location.href = "index.html";
+        }
       });
-    });
+      });
   </script>
 
 </head>
