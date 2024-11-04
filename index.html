@@ -146,12 +146,14 @@
           fallbackLng: 'en', // Limbă de rezervă
           debug: true,
           backend: {
-            loadPath: 'https://raw.githubusercontent.com/RosuClaudiu/CV/main/locales/{{en}}/translation.json' // Calea către fișierele de traducere
+            loadPath: 'https://raw.githubusercontent.com/RosuClaudiu/CV/main/locales/{{lng}}/translation.json' // Calea către fișierele de traducere
           }
         }, function(err, t) {
           // Actualizarea textelor traduse la inițializare
           document.getElementById('cv-title').innerHTML = t('cv_title');
           document.getElementById('language-toggle').innerHTML = t('language_button');
+          // Actualizarea informațiilor personale
+        document.getElementById('personal-name').innerHTML = t('personal_information.name');
         });
 
       // Funcția de schimbare a limbii
