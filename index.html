@@ -144,8 +144,9 @@
         .init({
           lng: 'en',
           debug: true,
-          resources: {
-            en: {
+          backend: {
+            loadPath: 'locales/{{en}}/translation.json' // Calea către fișierul JSON
+          }
               translation: {
                 "cv_title": "My CV",
                 "language_button": "English"
