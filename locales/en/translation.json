@@ -1,7 +1,5 @@
-lng: 'en',
-debug: true,
-resources: {
-  en: {
+{
+  "en": {
     translation: {
       "cv_title": "My CV",
       "language_button": "English",
@@ -138,4 +136,6 @@ resources: {
           "TEAM PLAYER"
         ]
       }
+    }
+  }
   
