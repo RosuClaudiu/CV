@@ -548,7 +548,7 @@
     const greenCube = new THREE.Mesh(greenGeometry, greenMaterial);
     scene.add(greenCube);
 
-    greenCube.position.x = -1.5; // Mutam cubul verde in stanga
+    greenCube.position.x = 3.5; // Mutam cubul verde in stanga
 
     const redGeometry = new THREE.BoxGeometry(0.58, 0.58, 0.58);
     const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Culoarea rosie
@@ -601,20 +601,21 @@
       
         const scene = new THREE.Scene();
       
-        const yellowGeometry = new THREE.BoxGeometry(0.98, 0.98, 0.98);
+        const yellowGeometry = new THREE.BoxGeometry(0.30, 0.30, 0.30);
         const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
         const yellowCube = new THREE.Mesh(yellowGeometry, yellowMaterial);
         scene.add(yellowCube);
       
-        yellowCube.position.x = 1.5;
+        yellowCube.position.x = 3.5;
       
-        const cubeGeometry = new THREE.BoxGeometry(1, 1, 1); // Asigură-te că cube este definit
+        const cubeGeometry = new THREE.BoxGeometry(0.30, 0.30, 0.30); // Asigură-te că cube este definit
         const cubeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
         scene.add(cube); // Adaugă cube la scenă
+         cube.position.x = 0.9; // Mutam cubul verde in stanga
       
         const camera = new THREE.PerspectiveCamera(
-          75,
+          60,
           window.innerWidth / window.innerHeight,
           0.1,
           1000
