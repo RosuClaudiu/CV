@@ -1,4 +1,55 @@
 {
-  "cv_title": "My CV",
-  "language_button": "English"
+  "personal_info": {
+    "name": "Roșu Claudiu",
+    "address": "Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4",
+    "phone": "0723389779",
+    "email": "rosu.claudiu@yahoo.com",
+    "gender": "Male",
+    "date_of_birth": "23/02/1976",
+    "nationality": "Romanian"
+  },
+  "professional_objective": [
+    "I seek a job where I can use my knowledge and experience to contribute to the development and promotion of the company.",
+    "It is important for me to be part of a team where mutual respect and a culture of collaboration exist.",
+    "I want to work alongside people who share my values and are open to new ideas and innovation."
+  ],
+  "professional_experience": [
+    {
+      "title": "Freelancer/Blogger",
+      "dates": "December 2021 - Present",
+      "location": "Bucharest",
+      "industry": "Internet / Online Marketing",
+      "responsibilities": [
+        "Creating websites",
+        "Writing specific texts and online communication materials for created websites",
+        "Writing specific texts and online communication materials for Social Media",
+        "Searching for and identifying photographs or graphic material",
+        "Researching and documenting necessary information for creating text content",
+        "Researching and documenting necessary information for creating graphic content",
+        "Research for Social Media and SEO for the created text",
+        "Adding text, graphic, and video content to created websites",
+        "Adding text, graphic, and video content to social networks"
+      ]
+    },
+    {
+      "title": "Economist",
+      "dates": "March 2021 - November 2021",
+      "location": "Bucharest",
+      "industry": "Health / Administration of Hospitals and Medical Services Bucharest",
+      "company": "Dr. Victor Babeș Infectious Diseases and Tropical Hospital",
+      "responsibilities": [
+        "Preparing proposals for the investment and capital repair plan for properties in use",
+        "Developing the annual public procurement plan by proposing purchases and equipment related to the unit's administrative activities",
+        "Managing lease contracts for properties owned or administered by the unit; creating monthly reports",
+        "Organizing cleaning in all activity sectors",
+        "Ensuring timely acquisition of all necessary permits for the proper functioning of the unit and keeping a strict record of the validity periods of existing permits",
+        "Determining the need for products to ensure proper management of assets, ensuring timely compliance with the procurement plan",
+        "Ensuring quality control and acceptance of repairs and maintenance products performed",
+        "Keeping records of medical and non-medical equipment and machinery",
+        "Keeping records of the vehicle fleet by creating travel sheets, monitoring inspection dates, insurances, and the proper functioning of vehicles owned by the hospital",
+        "Resolving any administrative issues"
+      ]
+    }
+    // Adaugă celelalte experiențe profesionale în același format
+  ]
 }
