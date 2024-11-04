@@ -1,4 +1,139 @@
 {
-  "cv_title": "CV-ul Meu",
-  "language_button": "Română"
+  "ro": {
+    "cv_title": "CV-ul Meu",
+    "language_button": "Română",
+    "personal_information": {
+      "name": "Nume: Claudiu Roșu",
+      "address": "Adresă: Bd. Camil Ressu St. nr. 31, Bl N3, Sc.4",
+      "phone": "Telefon: 0723389779",
+      "email": "Email: rosu.claudiu@yahoo.com",
+      "gender": "Gen: Masculin",
+      "birth_date": "Data nașterii: 23/02/1976",
+      "nationality": "Naționalitate: Română"
+    },
+    "professional_objective": {
+      "title": "Obiectiv Profesional",
+      "description_1": "Caut un loc de muncă unde să pot folosi cunoștințele și experiența mea pentru a contribui la dezvoltarea și promovarea companiei.",
+      "description_2": "Este important pentru mine să fac parte dintr-o echipă cu respect reciproc și o cultură de colaborare.",
+      "description_3": "Vreau să lucrez alături de oameni care împărtășesc valorile mele și sunt deschiși la idei și inovații noi."
+    },
+    "work_experience": {
+      "title": "Experiență Profesională",
+      "job_1": {
+        "position": "Freelancer/Blogger",
+        "duration": "Decembrie 2021 - Prezent",
+        "location": "București | Internet / Marketing Online",
+        "responsibilities": [
+          "Crearea de site-uri web",
+          "Crearea de texte specifice și materiale de comunicare online pentru site-urile create",
+          "Crearea de texte specifice și materiale de comunicare online pentru rețelele sociale",
+          "Căutarea și identificarea fotografiilor sau materialelor grafice",
+          "Cercetarea și documentarea informațiilor necesare pentru crearea de conținut",
+          "Cercetarea și documentarea informațiilor necesare pentru crearea de conținut grafic",
+          "Efectuarea de cercetări pentru rețelele sociale și SEO pentru textele create",
+          "Adăugarea de texte, conținut grafic și video pe site-urile create",
+          "Adăugarea de texte, conținut grafic și video pe rețelele sociale"
+        ]
+      },
+      "job_2": {
+        "position": "Economist",
+        "duration": "Martie 2021 - Noiembrie 2021",
+        "location": "București | Administrarea sănătății / Spitalul de Servicii Medicale din București",
+        "responsibilities": [
+          "Pregătirea propunerilor pentru planul de investiții și reparații capitale pentru clădirile aflate în folosință",
+          "Dezvoltarea planului anual de achiziții prin propunerea de achiziții și echipamente legate de activitatea administrativă",
+          "Gestionarea contractelor de închiriere pentru proprietățile deținute sau administrate de unitate",
+          "Asigurarea curățeniei în toate sectoarele de activitate",
+          "Obținerea autorizațiilor necesare pentru funcționarea unității și menținerea valabilității acestora",
+          "Determinarea produselor necesare pentru administrarea corectă a bunurilor și asigurarea achizițiilor în termen util",
+          "Controlul calității și recepția produselor de reparații și întreținere",
+          "Urmărirea și menținerea echipamentelor medicale și non-medicale",
+          "Gestionarea evidențelor flotei de vehicule, a termenelor de inspecție, asigurărilor și a stării operaționale"
+        ]
+      },
+      "job_3": {
+        "position": "Senior Relationship Manager Premium Clients - Raiffeisen Bank",
+        "duration": "Februarie 2013 - Septembrie 2019",
+        "location": "București | Bănci / Servicii Financiare",
+        "responsibilities": [
+          "Inițierea și dezvoltarea relațiilor cu clienții existenți și potențiali",
+          "Propunerea de soluții de gestionare a activelor pentru rentabilitate optimizată și gestionarea riscurilor",
+          "Promovarea și vânzarea activă de fonduri de investiții, conturi de economii, împrumuturi, asigurări etc.",
+          "Servind ca interfață bancară pentru clienții Premium, solicitând suport de la administrația centrală",
+          "Sprijinirea obiectivelor de vânzări, având ca scop maximizarea profitabilității în segmentul clienților Premium"
+        ]
+      }
+    },
+    "education": {
+      "title": "Educație",
+      "masters": {
+        "year": "2009 - 2011",
+        "institution": "Universitatea Spiru Haret, Facultatea de Finanțe și Bănci, București",
+        "degree": "Program de Master în 'Bănci și Piețe Financiare'"
+      },
+      "bachelor": {
+        "year": "2006 - 2009",
+        "institution": "Universitatea Spiru Haret, Facultatea de Finanțe și Bănci, București",
+        "degree": "Diplomă de Licență"
+      },
+      "course": {
+        "year": "2003 - 2004",
+        "institution": "Crismalin Infoserv",
+        "degree": "Curs de Operare Computer"
+      },
+      "high_school": {
+        "year": "1990 - 1995",
+        "institution": "Liceul Octav Onicescu, București",
+        "profile": "Umanist - Limbi Străine (Rusă/Engleză)"
+      }
+    },
+    "computer_skills": {
+      "title": "Competențe Informatice",
+      "skills": [
+        "Microsoft Office",
+        "WordPress (Basic)",
+        "HTML (Beginner)",
+        "Python (Beginner)",
+        "Windows (Basic)",
+        "Rețele (Beginner)",
+        "JavaScript (Beginner)"
+      ]
+    },
+    "job_skills": {
+      "title": "Competențe Profesionale",
+      "certifications": [
+        "Certificare MIFID II - Formare Personal Informare Financiară - Certificat de Institutul Bancar Român, 2019",
+        "Certificare Consultant Investiții MIFID II - Certificat de 'ASF', 2018",
+        "Certificare Asigurare: Institutul de Management în Asigurări - IMA, Septembrie 2016"
+      ]
+    },
+    "personal_skills": {
+      "title": "Competențe Personale",
+      "mother_tongue": "Limba maternă - Română",
+      "foreign_languages": "Limbi străine - Engleză (Intermediar)"
+    },
+    "additional_skills": {
+      "title": "Alte Competențe",
+      "skills": [
+        "Cunoștințe Software AI",
+        "Cunoștințe Social Media",
+        "Cunoștințe Grafică Digitală: CapCut, Adobe Photoshop, Editor Windows",
+        "Cunoștințe Google Analytics, Search Console"
+      ]
+    },
+    "driving_license": {
+      "title": "Permis de Conducere",
+      "category": "Categorie B, Ianuarie 1995"
+    },
+    "abilities": {
+      "title": "Aptitudini",
+      "skills": [
+        "PRECIS",
+        "EMPATIC",
+        "ORGANIZAT",
+        "PROFESIONAL",
+        "MEMBRU DE ECHIPĂ"
+      ]
+    }
+  }
 }
