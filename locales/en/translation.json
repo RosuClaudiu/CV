@@ -1,55 +1,143 @@
-{
-  "personal_info": {
-    "name": "Roșu Claudiu",
-    "address": "Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4",
-    "phone": "0723389779",
-    "email": "rosu.claudiu@yahoo.com",
-    "gender": "Male",
-    "date_of_birth": "23/02/1976",
-    "nationality": "Romanian"
-  },
-  "professional_objective": [
-    "I seek a job where I can use my knowledge and experience to contribute to the development and promotion of the company.",
-    "It is important for me to be part of a team where mutual respect and a culture of collaboration exist.",
-    "I want to work alongside people who share my values and are open to new ideas and innovation."
-  ],
-  "professional_experience": [
-    {
-      "title": "Freelancer/Blogger",
-      "dates": "December 2021 - Present",
-      "location": "Bucharest",
-      "industry": "Internet / Online Marketing",
-      "responsibilities": [
-        "Creating websites",
-        "Writing specific texts and online communication materials for created websites",
-        "Writing specific texts and online communication materials for Social Media",
-        "Searching for and identifying photographs or graphic material",
-        "Researching and documenting necessary information for creating text content",
-        "Researching and documenting necessary information for creating graphic content",
-        "Research for Social Media and SEO for the created text",
-        "Adding text, graphic, and video content to created websites",
-        "Adding text, graphic, and video content to social networks"
-      ]
-    },
-    {
-      "title": "Economist",
-      "dates": "March 2021 - November 2021",
-      "location": "Bucharest",
-      "industry": "Health / Administration of Hospitals and Medical Services Bucharest",
-      "company": "Dr. Victor Babeș Infectious Diseases and Tropical Hospital",
-      "responsibilities": [
-        "Preparing proposals for the investment and capital repair plan for properties in use",
-        "Developing the annual public procurement plan by proposing purchases and equipment related to the unit's administrative activities",
-        "Managing lease contracts for properties owned or administered by the unit; creating monthly reports",
-        "Organizing cleaning in all activity sectors",
-        "Ensuring timely acquisition of all necessary permits for the proper functioning of the unit and keeping a strict record of the validity periods of existing permits",
-        "Determining the need for products to ensure proper management of assets, ensuring timely compliance with the procurement plan",
-        "Ensuring quality control and acceptance of repairs and maintenance products performed",
-        "Keeping records of medical and non-medical equipment and machinery",
-        "Keeping records of the vehicle fleet by creating travel sheets, monitoring inspection dates, insurances, and the proper functioning of vehicles owned by the hospital",
-        "Resolving any administrative issues"
-      ]
+lng: 'en',
+debug: true,
+resources: {
+  en: {
+    translation: {
+      "cv_title": "My CV",
+      "language_button": "English",
+      "personal_information": {
+        "name": "Name: Claudiu Roșu",
+        "address": "Address: Bd. Camil Ressu St. no. 31, Bl N3, Sc.4",
+        "phone": "Phone: 0723389779",
+        "email": "Email: rosu.claudiu@yahoo.com",
+        "gender": "Gender: Male",
+        "birth_date": "Date of birth: 23/02/1976",
+        "nationality": "Nationality: Romanian"
+      },
+      "professional_objective": {
+        "title": "Professional Objective",
+        "description_1": "I am seeking a job where I can use my knowledge and experience to contribute to the development and promotion of the company.",
+        "description_2": "It's important to me to be part of a team with mutual respect and a culture of collaboration.",
+        "description_3": "I want to work alongside people who share my values and are open to new ideas and innovation."
+      },
+      "work_experience": {
+        "title": "Professional Experience",
+        "job_1": {
+          "position": "Freelancer/Blogger",
+          "duration": "December 2021 - Present",
+          "location": "Bucharest | Internet / Online Marketing",
+          "responsibilities": [
+            "Creating websites",
+            "Creating specific texts and online communication materials for created websites",
+            "Creating specific texts and online communication materials for Social Media",
+            "Searching and identifying photos or graphic materials",
+            "Researching and documenting information necessary for content creation",
+            "Researching and documenting information necessary for graphic content creation",
+            "Conducting research for Social Media and SEO for created texts",
+            "Adding text, graphic, and video content on created websites",
+            "Adding text, graphic, and video content on social networks"
+          ]
+        },
+        "job_2": {
+          "position": "Economist",
+          "duration": "March 2021 - November 2021",
+          "location": "Bucharest | Health / Hospital Administration and Medical Services of Bucharest",
+          "responsibilities": [
+            "Preparing proposals for the investment and capital repair plan for buildings in use",
+            "Developing the annual procurement plan by proposing acquisitions and equipment related to administrative activity",
+            "Managing rental contracts for properties owned or administered by the unit",
+            "Ensuring cleanliness in all activity sectors",
+            "Obtaining required authorizations for unit operation and maintaining their validity",
+            "Determining required products for proper administration of assets and securing timely procurement",
+            "Quality control and reception of repairs and maintenance products",
+            "Tracking and maintaining medical and non-medical equipment",
+            "Managing vehicle fleet records, inspection deadlines, insurance, and operational status"
+          ]
+        },
+        "job_3": {
+          "position": "Senior Relationship Manager Premium Clients - Raiffeisen Bank",
+          "duration": "February 2013 - September 2019",
+          "location": "Bucharest | Banks / Financial Services",
+          "responsibilities": [
+            "Initiating and developing relationships with existing and prospective clients",
+            "Proposing asset management solutions for optimized returns and risk management",
+            "Actively promoting and selling investment funds, savings accounts, loans, insurances, and more",
+            "Serving as bank interface for Premium clients, requesting support from central admin",
+            "Supporting sales objectives, aiming to maximize profitability in the Premium client segment"
+          ]
+        }
+      },
+      "education": {
+        "title": "Education",
+        "masters": {
+          "year": "2009 - 2011",
+          "institution": "Spiru Haret University, Faculty of Finance and Banking, Bucharest",
+          "degree": "Master's Program in 'Banks and Financial Markets'"
+        },
+        "bachelor": {
+          "year": "2006 - 2009",
+          "institution": "Spiru Haret University, Faculty of Finance and Banking, Bucharest",
+          "degree": "Bachelor's Degree"
+        },
+        "course": {
+          "year": "2003 - 2004",
+          "institution": "Crismalin Infoserv",
+          "degree": "Computer Operation Course"
+        },
+        "high_school": {
+          "year": "1990 - 1995",
+          "institution": "Octav Onicescu High School, Bucharest",
+          "profile": "Humanities - Foreign Languages (Russian/English)"
+        }
+      },
+      "computer_skills": {
+        "title": "Computer Skills",
+        "skills": [
+          "Microsoft Office",
+          "WordPress (Basic)",
+          "HTML (Beginner)",
+          "Python (Beginner)",
+          "Windows (Basic)",
+          "Networks (Beginner)",
+          "JavaScript (Beginner)"
+        ]
+      },
+      "job_skills": {
+        "title": "Job Skills",
+        "certifications": [
+          "MIFID II Certification - Financial Information Personnel Training - Certified by Romanian Banking Institute, 2019",
+          "Investment Consultant Certification MIFID II - Certified by 'ASF', 2018",
+          "Insurance Certification: Institute of Management in Insurance - IMA, September 2016"
+        ]
+      },
+      "personal_skills": {
+        "title": "Personal Skills",
+        "mother_tongue": "Mother Tongue - Romanian",
+        "foreign_languages": "Other Languages - English (Intermediate)"
+      },
+      "additional_skills": {
+        "title": "Other Skills",
+        "skills": [
+          "AI Software Knowledge",
+          "Social Media Knowledge",
+          "Digital Graphics Knowledge: CapCut, Adobe Photoshop, Windows Editor",
+          "Google Analytics, Search Console Knowledge"
+        ]
+      },
+      "driving_license": {
+        "title": "Driving License",
+        "category": "Category B, January 1995"
+      },
+      "abilities": {
+        "title": "Abilities",
+        "skills": [
+          "ACCURATE",
+          "EMPATHETIC",
+          "ORGANIZED",
+          "PROFESSIONAL",
+          "TEAM PLAYER"
+        ]
+      }
     }
-    // Adaugă celelalte experiențe profesionale în același format
-  ]
+  }
 }
