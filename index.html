@@ -160,6 +160,7 @@
           }
         }, function(err, t) {
           // Actualizarea textelor traduse la inițializare
+          document.documentElement.lang = i18next.language;
           document.getElementById('cv-title').innerHTML = t('cv_title');
           document.getElementById('language-toggle').innerHTML = t('language_button');
         });
