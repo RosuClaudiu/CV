@@ -145,18 +145,18 @@
           lng: 'en',
           debug: true,
           resources: {
-            ro: {
+            en: {
                 translation: {
-                  "cv_title":  "My CV",
-                  "language_button": "Română"
+                    "cv_title": "CV-ul Meu",
+                    "language_button": "English"
             
               }
             },
               
-            en: {
+            ro: {
                 translation: {
-                  "cv_title":"CV-ul Meu",
-                  "language_button": "English"}
+                  "cv_title": "My CV",
+                  "language_button": "Română"}
             }
           }
         }, function(err, t) {
@@ -169,7 +169,7 @@
       // Funcția de schimbare a limbii
       document.getElementById('language-toggle').addEventListener('click', function() {
         const currentLang = document.documentElement.lang;
-        if (currentLang === "en") {
+        if (currentLang === "ro") {
           // Redirecționează la versiunea în engleză
           window.location.href = "cv_en.html";
         } else {
@@ -177,7 +177,29 @@
           window.location.href = "index.html";
         }
       });
-      });
+  
+      // Control pentru pornirea și oprirea animațiilor
+      let animationsActive = true;
+
+      function toggleAnimations() {
+        const elementsWithAnimation = [
+          document.body,
+          document.getElementById("profile-picture"),
+          ...document.querySelectorAll(".skill"),
+          document.getElementById("left-column")
+        ];
+
+        elementsWithAnimation.forEach(el => {
+          el.style.animation = animationsActive ? "none" : "";
+        });
+
+        animationsActive = !animationsActive;
+      }
+
+      document.addEventListener("click", toggleAnimations);
+     
+    });
+
   </script>
 
 </head>
@@ -192,15 +214,17 @@
       <section class="section">
     </ul>
 </ul>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
         <div>Nume: Roșu Claudiu</div>
+        <div>Data nașterii: 23/02/1976</div>
         <div>Adresă: Str. Bd.Camil Ressu nr. 31, Bl N3, Sc.4,</div>
         <div>Telefon: 0723389779</div>
         <div>Email: rosu.claudiu@yahoo.com</div>
-        <div>Nume: Roșu Claudiu</div>
         <div>Sex: Masculin</div>
-        <div>Data nașterii: 23/02/1976</div>
         <div>Naționalitate: Română</div>
-        <div>Telefon: 0723389779</div>
         <div>Email: rosu.claudiu@yahoo.com</div>
       </section>
 
@@ -228,7 +252,7 @@
           <p>Webmaster:</p>
           <ul>
             <li>www.atelieruldestrungarie.wordpress.com</li>
-            <li>www.norocosul.000webhostapp.com</li>
+            <li>www.tatilacratita.github.io/LuckyME/</li>
             <li>www.starthtml.nicepage.io</li>
                  </ul>
                 <p>Responsabilități:</p>
