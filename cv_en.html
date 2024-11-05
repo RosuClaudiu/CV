@@ -37,13 +37,15 @@
 
     #container {
       position: relative;
+      padding-top: 180px; 
+      
     }
 
     #left-column {
       padding-right: 0px;
       margin-left: 1%;
       margin-top: 100px;
-      animation: textAnimation 120s linear infinite;
+      animation: textAnimation 130s linear infinite;
       transform-origin: bottom;
     }
 
@@ -146,7 +148,7 @@
           debug: true,
           resources: {
             en: {
-         translation: {
+              translation: {
                 "cv_title": "CV-ul Meu",
                 "language_button": "English"
               }
@@ -168,7 +170,7 @@
       // Funcția de schimbare a limbii
       document.getElementById('language-toggle').addEventListener('click', function() {
         const currentLang = document.documentElement.lang;
-        if (currentLang === "ro") {
+        if (currentLang === "en") {
           // Redirecționează la versiunea în română
           window.location.href = "index.html";
         } else {
@@ -177,7 +179,29 @@
           
         }
       });
+         
+      // Control pentru pornirea și oprirea animațiilor
+      let animationsActive = true;
+
+      function toggleAnimations() {
+        const elementsWithAnimation = [
+          document.body,
+          document.getElementById("profile-picture"),
+          ...document.querySelectorAll(".skill"),
+          document.getElementById("left-column")
+        ];
+
+        elementsWithAnimation.forEach(el => {
+          el.style.animation = animationsActive ? "none" : "";
+        });
+
+        animationsActive = !animationsActive;
+      }
+
+      document.addEventListener("click", toggleAnimations);
+     
     });
+
   </script>
 
 </head>
@@ -192,19 +216,19 @@
       <section class="section">
     </ul>
 </ul>      
-        <div>Name: Roșu Claudiu</div>
-        <div>Address:Bucharest, Bd. Camil Ressu no. 31, Bl N3, Sc.4</div>
-        <div>Phone: 0723389779</div>
-        <div>Date of Birth: 23/02/1976</div>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
+        <div>"""""""" </div>
         <div>Name: Roșu Claudiu</div>
         <div>Date of Birth: 23/02/1976</div>
         <div>Address: Bd. Camil Ressu no. 31, Bl N3, Sc.4</div>
         <div>Phone: 0723389779</div>
         <div>Email: rosu.claudiu@yahoo.com</div>
         <div>Sex: Male</div>
-        <div>Country: Romania</div>
+        <div>Date of Birth: 23/02/1976</div>
         <div>Nationality: Romanian</div>
-        <div> </div>
+        <div>Email: rosu.claudiu@yahoo.com</div>
       </section>
 
       <section class="section">
