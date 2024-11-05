@@ -145,18 +145,20 @@
           lng: 'ro',
           debug: true,
           resources: {
+            ro: {
+                translation: {
+                  "cv_title": "CV-ul Meu",
+                  "language_button": "Română"
+            
+              }
+            },
+              
             en: {
                 translation: {
                   "cv_title": "My CV",
                   "language_button": "English"}
-              }
-            },
-              ro: {
-              translation: {
-                  "cv_title": "CV-ul Meu",
-                  "language_button": "Română"
-              }
             }
+          }
         }, function(err, t) {
           // Actualizarea textelor traduse la inițializare
           document.documentElement.lang = i18next.language;
