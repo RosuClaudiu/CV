@@ -70,6 +70,7 @@
       height: 170px;
       object-fit: contain;
       margin-bottom: 20px;
+      border-radius: 20px; /* Rotunjire colțuri */
       animation: rotate 15s linear infinite;
       transform-style: preserve-3d;
     }
@@ -158,14 +159,14 @@
             en: {
                 translation: {
                     "cv_title": "CV-ul Meu",
-                    "download_cv_ro": "Descarcă CV_ro",
+                    "download_cv_ro": "Descarcă CV_RO",
                     "language_button": "English"
                 }
             },
             ro: {
                 translation: {
                   "cv_title": "My CV",
-                  "download_cv_en": "Download CV_en",
+                  "download_cv_en": "Download CV_EN",
                   "language_button": "Română"
                 }
             }
@@ -212,7 +213,7 @@
     downloadLink.href = "https://raw.githubusercontent.com/RosuClaudiu/CV/main/CV_ro.docx";
     downloadLink.download = "CV_ro.docx"; // numele implicit al fișierului descărcat
     downloadLink.click();
-
+         });
       // Adaugă event listener pentru butonul de schimbare a limbii
       document.getElementById("language-toggle").addEventListener("click", function(event) {
         event.preventDefault(); // evită comportamentul implicit
@@ -228,7 +229,6 @@
               
           });
         });
-      });
   
   </script>
 </head>
@@ -570,7 +570,7 @@
     <div id="right-column" style="position: fixed; top: 10px; right: 1px; z-index: 999;">
         <img id="profile-picture" src="https://raw.githubusercontent.com/RosuClaudiu/CV/main/pozacv2.jpg" alt="Poza Profil">
         <button id="language-toggle" style="position: relative; z-index: 1000;">Engleză</button>
-        <button id="download-cv-ro" style="position: relative; z-index: 1000;">Descarcă CV_ro</button>
+        <button id="download-cv-ro" style="position: relative; z-index: 1000;">Descarcă CV_RO</button>
 
     </div>
 
