@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV-ul Meu</title>
+  <title>My CV</title>
   <style>
     /* Stilurile CSS */
     body {
@@ -38,7 +38,6 @@
     #container {
       position: relative;
       padding-top: 180px; 
-      
     }
 
     #left-column {
@@ -144,19 +143,19 @@
       i18next
         .use(i18nextHttpBackend)
         .init({
-          lng: 'ro',
+          lng: 'en',  // Setarea limbii implicite
           debug: true,
           resources: {
             en: {
               translation: {
-                "cv_title": "CV-ul Meu",
-                "language_button": "English"
+                "cv_title": "My CV",
+                "language_button": "Română"
               }
             },
             ro: {
               translation: {
-                "cv_title": "My CV",
-                "language_button": "Română"
+                "cv_title": "CV-ul Meu",
+                "language_button": "English"
               }
             }
           }
@@ -168,7 +167,10 @@
         });
 
       // Funcția de schimbare a limbii
-      document.getElementById('language-toggle').addEventListener('click', function() {
+      document.getElementById('language-toggle').addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
+
         const currentLang = document.documentElement.lang;
         if (currentLang === "en") {
           // Redirecționează la versiunea în română
@@ -176,14 +178,16 @@
         } else {
           // Redirecționează la versiunea în engleză
           window.location.href = "cv_en.html";
-          
         }
       });
-         
+
       // Control pentru pornirea și oprirea animațiilor
       let animationsActive = true;
 
-      function toggleAnimations() {
+      function toggleAnimations(event) {
+        // Verifică dacă clicul a fost pe butonul de schimbare a limbii
+        if (event.target.id === "language-toggle") return;
+
         const elementsWithAnimation = [
           document.body,
           document.getElementById("profile-picture"),
@@ -198,10 +202,9 @@
         animationsActive = !animationsActive;
       }
 
+      // Adaugă event listener-ul pentru clic
       document.addEventListener("click", toggleAnimations);
-     
     });
-
   </script>
 
 </head>
