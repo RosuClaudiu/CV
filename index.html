@@ -191,9 +191,16 @@
 
       // Adaugă event listener pentru butonul de schimbare a limbii
       document.getElementById("language-toggle").addEventListener("click", function(event) {
+        event.preventDefault(); // evită comportamentul implicit
         event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
+
+        // Redirecționare pe baza limbii curente
         const currentLang = document.documentElement.lang;
-        window.location.href = currentLang === "ro" ? "cv_en.html" : "index.html";
+        if (currentLang === "ro") {
+          window.location.href = "cv_en.html";
+        } else {
+          window.location.href = "index.html";
+        }
       });
     });
   </script>
