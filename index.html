@@ -149,14 +149,13 @@
                 translation: {
                     "cv_title": "CV-ul Meu",
                     "language_button": "English"
-            
-              }
+                }
             },
-              
             ro: {
                 translation: {
                   "cv_title": "My CV",
-                  "language_button": "Română"}
+                  "language_button": "Română"
+                }
             }
           }
         }, function(err, t) {
@@ -166,22 +165,13 @@
           document.getElementById('language-toggle').innerHTML = t('language_button');
         });
 
-      // Funcția de schimbare a limbii
-      document.getElementById('language-toggle').addEventListener('click', function() {
-        const currentLang = document.documentElement.lang;
-        if (currentLang === "ro") {
-          // Redirecționează la versiunea în engleză
-          window.location.href = "cv_en.html";
-        } else {
-          // Redirecționează la versiunea în română
-          window.location.href = "index.html";
-        }
-      });
-  
       // Control pentru pornirea și oprirea animațiilor
       let animationsActive = true;
 
-      function toggleAnimations() {
+      function toggleAnimations(event) {
+        // Verifică dacă clicul a fost pe butonul de schimbare a limbii
+        if (event.target.id === "language-toggle") return;
+
         const elementsWithAnimation = [
           document.body,
           document.getElementById("profile-picture"),
@@ -196,12 +186,17 @@
         animationsActive = !animationsActive;
       }
 
+      // Adaugă event listener-ul pentru clic
       document.addEventListener("click", toggleAnimations);
-     
+
+      // Adaugă event listener pentru butonul de schimbare a limbii
+      document.getElementById("language-toggle").addEventListener("click", function(event) {
+        event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
+        const currentLang = document.documentElement.lang;
+        window.location.href = currentLang === "ro" ? "cv_en.html" : "index.html";
+      });
     });
-
   </script>
-
 </head>
 <body>
   <div id="container">
