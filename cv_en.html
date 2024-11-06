@@ -71,6 +71,7 @@
       height: 170px;
       object-fit: contain;
       margin-bottom: 20px;
+      border-radius: 20px; /* Rotunjire colțuri */
       animation: rotate 15s linear infinite;
       transform-style: preserve-3d;
     }
@@ -86,7 +87,17 @@
       animation: pulse 2s ease-in-out infinite;
       margin-top: 10px;
     }
-
+    #download-cv-en {
+        padding: 10px 20px;
+      background-color: #ff3347;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        animation: pulse 2s ease-in-out infinite;
+        margin-top: 10px;
+      }
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.1); }
@@ -149,12 +160,14 @@
             en: {
               translation: {
                 "cv_title": "My CV",
+                "download_cv_en":"Download CV_EN", 
                 "language_button": "Română"
               }
             },
             ro: {
               translation: {
                 "cv_title": "CV-ul Meu",
+                "download_cv_ro": "Descarcă CV_RO",
                 "language_button": "English"
               }
             }
@@ -164,8 +177,19 @@
           document.documentElement.lang = i18next.language;
           document.getElementById('cv-title').innerHTML = t('cv_title');
           document.getElementById('language-toggle').innerHTML = t('language_button');
+          document.getElementById('download-cv-en').innerHTML = t('download_cv_en');
         });
-
+            // Adaugă event listener pentru butonul de schimbare a limbii
+            document.getElementById("download-cv-en").addEventListener("click", function(event) {
+                event.preventDefault(); // evită comportamentul implicit
+                event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
+        
+            // Descarcă fișierul de pe GitHub
+            const downloadLink = document.createElement("a");
+            downloadLink.href = "https://raw.githubusercontent.com/RosuClaudiu/CV/main/CV_en.docx";
+            downloadLink.download = "CV_ro.docx"; // numele implicit al fișierului descărcat
+            downloadLink.click();
+                 });
       // Funcția de schimbare a limbii
       document.getElementById('language-toggle').addEventListener('click', function(event) {
         event.preventDefault();
@@ -187,6 +211,7 @@
       function toggleAnimations(event) {
         // Verifică dacă clicul a fost pe butonul de schimbare a limbii
         if (event.target.id === "language-toggle") return;
+        if (event.target.id === "download-cv-en") return;
 
         const elementsWithAnimation = [
           document.body,
@@ -252,12 +277,12 @@
         <p>Administrator/Owner:</p>
         <ul>
           <li>www.tatilacratita.com</li>
-          <li>www.tatilacratita.github.io/lucky/</li>
-          <li>www.tatilacratita.github.io/Respiro/</li>
-          </ul>
-          <p>Webmaster:</p>
-          <ul>
+          <li>www.crypto-tati.site</li>
+        </ul>
+        <p>Webmaster:</p>
+        <ul>
           <li>www.atelieruldestrungarie.wordpress.com</li>
+          <li>www.norocosul.000webhostapp.com</li>
           <li>www.starthtml.nicepage.io</li>
         </ul>
         <p>Responsibilities:</p>
@@ -502,6 +527,7 @@
     <div id="right-column" style="position: fixed; top: 10px; right: 1px; z-index: 999;">
         <img id="profile-picture" src="https://raw.githubusercontent.com/RosuClaudiu/CV/main/pozacv2.jpg" alt="Poza Profil">
         <button id="language-toggle" style="position: relative; z-index: 1000;">Engleză</button>
+        <button id="download-cv-en" style="position: relative; z-index: 1000;">Download CV_EN</button>
     </div>
        
 
