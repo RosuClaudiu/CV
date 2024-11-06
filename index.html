@@ -202,6 +202,16 @@
 
       // Adaugă event listener-ul pentru clic
       document.addEventListener("click", toggleAnimations);
+      // Adaugă event listener pentru butonul de schimbare a limbii
+      document.getElementById("download-cv-ro").addEventListener("click", function(event) {
+        event.preventDefault(); // evită comportamentul implicit
+        event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
+
+    // Descarcă fișierul de pe GitHub
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "https://raw.githubusercontent.com/RosuClaudiu/CV/main/CV_ro.docx";
+    downloadLink.download = "CV_ro.docx"; // numele implicit al fișierului descărcat
+    downloadLink.click();
 
       // Adaugă event listener pentru butonul de schimbare a limbii
       document.getElementById("language-toggle").addEventListener("click", function(event) {
@@ -215,16 +225,7 @@
         } else {
           window.location.href = "index.html";
         }
-              // Adaugă event listener pentru butonul de schimbare a limbii
-        document.getElementById("download-cv-ro").addEventListener("click", function(event) {
-        event.preventDefault(); // evită comportamentul implicit
-        event.stopPropagation(); // oprește propagarea pentru a evita activarea toggleAnimations
-
-    // Descarcă fișierul de pe GitHub
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "https://raw.githubusercontent.com/RosuClaudiu/CV/main/CV_ro.docx";
-    downloadLink.download = "CV_ro.docx"; // numele implicit al fișierului descărcat
-    downloadLink.click();
+              
           });
         });
       });
